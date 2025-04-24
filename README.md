@@ -15,7 +15,7 @@ To write a program to predict the profit of a city using the linear regression m
 5.Plot the required graph for both for Gradient Descent Graph and Prediction Graph.
 6.End the program.
 
-## Program & Output:
+## Program :
 ```
 /*
 Program to implement the linear regression using gradient descent.
@@ -38,33 +38,20 @@ def linear_regression(X1, y, learning_rate=0.01, num_iters=1000):
     return theta
 data=pd.read_csv('50_Startups.csv',header=None)
 print(data.head())
-```
 
-![EX_3_OUTPUT_1](https://github.com/user-attachments/assets/d7c60ba1-d1ca-4bd5-8c8f-20a4c8197c04)
-
-```
 X=(data.iloc[1:, :-2].values)
 print(X)
-```
-![EX_3_OUTPUT_2](https://github.com/user-attachments/assets/c3f0e889-d85f-4c3a-a5be-3dbb40fef4a0)
 
-```
 X1=X.astype(float)
 scaler=StandardScaler()
 y=(data.iloc[1:,-1].values).reshape(-1,1)
 print(y)
-```
-![EX_3_OUTPUT_3](https://github.com/user-attachments/assets/b0d56d73-fee0-43de-91b5-3cda26dfbfeb)
 
-```
 X1_Scaled=scaler.fit_transform(X1)
 Y1_Scaled=scaler.fit_transform(y)
 print(X1_Scaled)
 print(Y1_Scaled)
-```
-![EX_3_OUTPUT_4](https://github.com/user-attachments/assets/0ff04bae-1e4f-441f-9831-dd0c0be00c91)
 
-```
 theta=linear_regression(X1_Scaled,Y1_Scaled)
 New_data=np.array([165349.2,136897.8,471784.1]).reshape(-1,1)
 New_Scaled=scaler.fit_transform(New_data)
@@ -73,6 +60,25 @@ prediction=prediction.reshape(-1,1)
 pre=scaler.inverse_transform(prediction)
 print(f"Predicted Value: {pre}")
 ```
+
+
+## Output:
+
+# Preview of datasets:
+
+![EX_3_OUTPUT_1](https://github.com/user-attachments/assets/d7c60ba1-d1ca-4bd5-8c8f-20a4c8197c04)
+
+# X Initialize : 
+![EX_3_OUTPUT_2](https://github.com/user-attachments/assets/c3f0e889-d85f-4c3a-a5be-3dbb40fef4a0)
+
+# Y Initialize : 
+![EX_3_OUTPUT_3](https://github.com/user-attachments/assets/b0d56d73-fee0-43de-91b5-3cda26dfbfeb)
+
+# X1 and Y1 Scaled Value :
+
+![EX_3_OUTPUT_4](https://github.com/user-attachments/assets/0ff04bae-1e4f-441f-9831-dd0c0be00c91)
+
+# Predicted Value:
 
 ![EX_3_OUTPUT_5](https://github.com/user-attachments/assets/998fb07e-02e4-40fa-9415-6193b990bc8f)
 
