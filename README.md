@@ -8,7 +8,7 @@ To write a program to predict the profit of a city using the linear regression m
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-```
+
 1. Load the dataset from '50_Startups.csv'.
 2. Extract features 'x' and target 'y'.
 3. Convert 'x' to float type and standardize using StandardScaler.
@@ -21,7 +21,7 @@ To write a program to predict the profit of a city using the linear regression m
 10. Compute the predicted value using the new scaled data and theta: prediction = np.dot(new_data, theta).
 11. Inverse scale the prediction to get the final output.
 12. Print the predicted value. .
-```
+
 ## Program :
 ```
 /*
